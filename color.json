@@ -1,0 +1,230 @@
+[
+      {
+        "nombre": "Almendra",
+        "plural": "Almendras",
+        "articlo": "Lxs",
+        "codigo": "1F334",
+        "caracter": "🌴",
+        "titulo": "Son de palo",
+        "subtitulo": "Los de afuera",        
+        "color": "#EED9C4"
+      },
+      {
+        "nombre": "Blanco",
+        "plural": "Blancos",
+        "articlo": "Lxs",
+        "codigo": "1F335",
+        "caracter": "🌵",        
+        "titulo": "En el terraplen",
+        "subtitulo": "A las 11",
+        "color": "#FFFFFF"
+      },
+      {
+        "nombre": "Negro",
+        "plural": "Negros",
+        "articlo": "Lxs",
+        "codigo": "1F347",
+        "caracter": "🍇",        
+        "titulo": "Quien no puso",
+        "subtitulo": "Faltan 150",        
+        "color": "#000000"
+      },
+      {
+        "nombre": "Rojo",
+        "plural": "Rojos",
+        "articlo": "Lxs",
+        "codigo": "1F349",        
+        "caracter": "🍉",
+        "titulo": "Garpa",
+        "subtitulo": "Rompe, pincha, cuelga",        
+        "color": "#FF0000"
+      },
+      {
+        "nombre": "Amarillo",
+        "plural": "Azules",
+        "articlo": "Lxs",
+        "codigo": "1F600",
+        "caracter": "😀",        
+        "titulo": "El hormiguero",
+        "subtitulo": "Cuidado",        
+        "color": "#FFFF00"
+      },
+      {
+        "nombre": "Rosa",
+        "plural": "Rosas",
+        "articlo": "Lxs",
+        "codigo": "1F480",
+        "caracter": "💀",        
+        "titulo": "Para ya terminamos",
+        "subtitulo": "Me tengo que ir",        
+        "color": "#FF77FF"
+      },
+      {
+        "nombre": "Azul",
+        "plural": "Azules",
+        "articlo": "Lxs",
+        "codigo": "1F989",
+        "caracter": "🦉",
+        "titulo": "Dale cinco",
+        "subtitulo": "Y Juan no vino?",        
+        "color": "#0000FF"
+      },
+      {
+        "nombre": "Violeta",
+        "plural": "Violetas",
+        "articlo": "Lxs",
+        "codigo": "1F986",
+        "caracter": "🦆",
+        "titulo": "Un auto",
+        "subtitulo": "Para que viene",        
+        "color": "#660099"
+      },{
+        "nombre": "Gris",
+        "plural": "Grises",
+        "articlo": "Lxs",
+        "codigo": "1F984",
+        "caracter": "🦄",
+        "titulo": "A la canilla",
+        "subtitulo": "Del arbol",        
+        "color": "#808080"
+      },{
+        "nombre": "Verde",
+        "plural": "Verdes",
+        "articlo": "Lxs",
+        "codigo": "1F1F2 1F1FD",
+        "caracter": "🌮",
+        "titulo": "Una raiz",
+        "subtitulo": "Uh el colo patio",
+        "color": "#00FF00"
+      },
+      {
+        "nombre": "Naranja",
+        "plural": "Naranjas",
+        "articlo": "Lxs",
+        "codigo": "1F1EF 1F1F2",
+        "caracter": "🥥",
+        "titulo": "Quiere jugar?",
+        "subtitulo": "Falta uno, alguno",        
+        "color": "#FFA000"
+      },
+      {
+        "nombre": "Celeste",
+        "plural": "Celestes",
+        "articlo": "Lxs",
+        "codigo": "1F1ED 1F1F3",
+        "caracter": "🥙",
+        "titulo": "Sacan ustedes",
+        "subtitulo": "Elijen ellos,",        
+        "color": "#87CEFF"
+      },
+      {
+        "nombre": "Marron",
+        "plural": "Marrones",
+        "articlo": "Lxs",
+        "codigo": "1F1FA 1F1F8",
+        "caracter": "🍔",
+        "titulo": "El colo juega",
+        "subtitulo": "Un tiempo para cada lado",
+        "color": "#964B00"
+      },
+      {
+        "nombre": "Lima",
+        "plural": "Limas",
+        "articlo": "Lxs",
+        "codigo": "1F1E8 1F1F7",
+        "caracter": "🍚",
+        "titulo": "Y el cabeza para nosotros",
+        "subtitulo": "El colo y el peti para ustedes",
+        "color": "#CCFF00"
+      },
+      {
+        "nombre": "Cian",
+        "plural": "Cian",
+        "articlo": "Lxs",
+        "codigo": "1F1EA 1F1E8",
+        "caracter": "🌹",
+        "titulo": "Agranden el arco!",
+        "subtitulo": "Dale un poco mas",
+        "color": "#00FFFF"
+      },
+      {
+        "nombre": "Borgoña",
+        "plural": "Borgoña",
+        "articlo": "Lxs",
+        "codigo": "1F1E7 1F1F4",
+        "caracter": "🥟",
+        "titulo": "Media cancha",
+        "subtitulo": "Con y sin pecheras",
+        "color": "#800020"
+      },
+      {
+        "nombre": "Crudo",
+        "plural": "Crudos",
+        "articlo": "Lxs",
+        "codigo": "1F1FB 1F1EA",
+        "caracter": "🕷️",
+        "titulo": "Ganador queda",
+        "subtitulo": "Y como hacemos?",
+        "color": "#C2B280"
+      },
+      {
+        "nombre": "Esmeralda",
+        "plural": "Esmeraldas",
+        "articlo": "Lxs",
+        "codigo": "1F1FA 1F1FE",
+        "caracter": "🧉",
+        "titulo": "Dos de diferencia",
+        "subtitulo": "A cuanto jugamos",        
+        "color": "#50C878"
+      },
+      {
+        "nombre": "Fucsia",
+        "plural": "Fucsias",
+        "articlo": "Lxs",
+        "codigo": "1F1E8 1F1F1",
+        "caracter": "🏄",
+        "titulo": "Cinco contra Cuatro",
+        "subtitulo": "Siempre falta uno",        
+        "color": "#FC0FC0"
+      },
+      {
+        "nombre": "Ciruela",
+        "plural": "Almendras",
+        "articlo": "Lxs",
+        "codigo": "1F383",
+        "caracter": "🎃",
+        "titulo": "Sera de D10s!!!",
+        "subtitulo": "Siempre falta alguien!",
+        "color": "#660066"
+      },
+      {
+        "nombre": "Coral",
+        "plural": "Corales",
+        "articlo": "Lxs",
+        "codigo": "1F600",
+        "caracter": "🤡",
+        "titulo": "Pan y queso",
+        "subtitulo": "Piedra papel o...",        
+        "color": "#FF7F50"
+      },
+      {
+        "nombre": "Aguamarina",
+        "plural": "Aguamarinas",
+        "articlo": "Lxs",
+        "codigo": "1F916",
+        "caracter": "🤖",
+        "titulo": "Te quiero mas",
+        "subtitulo": "Y cada dia",
+        "color": "#7FFFD4"
+      },
+      {
+        "nombre": "Amaranto",
+        "plural": "Amarantos",
+        "articlo": "Lxs",
+        "codigo": "1F47D",
+        "caracter": "👽",
+        "titulo": "Para quien entro",
+        "subtitulo": "Falta alguno?",
+        "color": "#E52B50"
+      }
+    ]

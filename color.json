@@ -1,15 +1,5 @@
 [
       {
-        "nombre": "prueba",
-        "plural": "pruebas",
-        "articlo": "Lxs",
-        "codigo": "1F334",
-        "caracter": "🍒",
-        "titulo": "Son de palo",
-        "subtitulo": "Los de afuera",        
-        "color": "#EED9C4"
-      },
-      {
         "nombre": "Almendra",
         "plural": "Almendras",
         "articlo": "Lxs",

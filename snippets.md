@@ -39,6 +39,11 @@ La regla es sencialla, escriba "." y seguido el nombre del snippet.
     ".a" más la URL y el nombre a mostrar. El link se abrirá en la misma ventana.
 <pre>.a https://google.com Google</pre>
 
+- #### Section
+    ".section" para navegar dentro del documento.
+<pre>t.section [section_name,sectionLabel]</pre>
+
+
 - #### Select
     ".select" más una lista de texto separada por comas. La primer coma representa el titulo. Anteponer "t" si deseamos un select dentro de un table del tipo HTML (no funciona en Table - Markdown).
 <pre>.select Esto es el titulo,,hola,chau,com va</pre>

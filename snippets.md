@@ -26,6 +26,11 @@ La regla es sencialla, escriba "." y seguido el nombre del snippet.
 <pre>.checkbox Me gusta este checkbox.</pre>
 <pre>t.checkbox</pre>
 
+- #### RadioBox
+    ".radiobox" más una lista de texto separada por comas. La primer coma representa el name (evita la multiselección de los radio buttons). Anteponer "t" si deseamos un radiobox dentro de un table del tipo HTML (no funciona en Table - Markdown).
+<pre>.radiobox radio_name,hola,chau,com va</pre>
+<pre>t.radiobox [name_radio,option-2,option-n]</pre>
+
 - #### HyperLink
     "." más la URL y el nombre a mostrar. El link se abrirá en un nuevo tab del navegador.
 <pre>.https://google.com Google</pre>

@@ -17,7 +17,7 @@ La regla es sencialla, escriba "." y seguido el nombre del snippet.
 <pre>t.inputbox</pre>
 
 - #### TextArea
-    ".textarea" más texto opcional a la izquierda. Anteponer "t" si deseamos un inputbox dentro de un table.
+    ".textarea" más texto opcional a la izquierda. Anteponer "t" si deseamos un textarea dentro de un table.
 <pre>.textarea Ingrese un texto:</pre>
 <pre>t.textarea</pre>
 

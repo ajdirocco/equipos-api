@@ -31,9 +31,13 @@ La regla es sencialla, escriba "." y seguido el nombre del snippet.
 <pre>.radiobox radio_name,hola,chau,com va</pre>
 <pre>t.radiobox [name_radio,option-2,option-n]</pre>
 
-- #### HyperLink
+- #### HyperLinkBlank
     "." más la URL y el nombre a mostrar. El link se abrirá en un nuevo tab del navegador.
 <pre>.https://google.com Google</pre>
+
+- #### HyperLink
+    ".a" más la URL y el nombre a mostrar. El link se abrirá en la misma ventana.
+<pre>.a https://google.com Google</pre>
 
 - #### Select
     ".select" más una lista de texto separada por comas. La primer coma representa el titulo. Anteponer "t" si deseamos un select dentro de un table del tipo HTML (no funciona en Table - Markdown).

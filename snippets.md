@@ -1,9 +1,9 @@
 <h1 style="text-align: center;margin-top: 5px; margin-bottom: 5px;">Genera Aplicaciones</h1>
-<h2 style="text-align: center;margin-top: 0px;margin-bottom: 5px;">Snippets</h2>
-<p style="text-align: center;">Escriba con Markdown y algunos tags especiales.</p>
+<h2 style="text-align: center;margin-top: 0px;margin-bottom: 5px;">.Tags</h2>
+<p style="text-align: center;">Escriba con Markdown y algunos snippets.</p>
 
-### Snippets
-Los snippets (fragmentos de código) representan de forma simplicada un tag HTML.
+### .Tags
+Los ".Tags" o snippets (fragmentos de código) representan de forma simplicada un tag HTML.
 La regla es sencialla, escriba "." y seguido el nombre del snippet.
 
 - #### Center

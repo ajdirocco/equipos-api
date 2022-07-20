@@ -53,7 +53,7 @@ La regla es sencialla, escriba "." y seguido el nombre del snippet.
 
 - #### Table - Markdown
     ".table" genera un snippet de table Markdown de dos columnas y dos filas.
-<pre>.table</pre>
+    <pre>.table</pre>
 
 - #### Table - HTML
     "t.table" genera un snippet de table HTML de tres columnas y dos filas.

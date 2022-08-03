@@ -5,9 +5,16 @@ Los snippets son fragmentos de texto que representan de forma simplicada un bloq
 La regla es sencialla, escriba "." y seguido el nombre del snippet.
 
 #### Center
-".center." más el elemento HTML Heading (h1 al h5) o Paragraphs. (p)
-<pre>.center.h1 Soy un H1 centrado</pre>
-<pre>.center.p Soy un Paragraphs centrado</pre>
+".center" más el elemento HTML a centrar con su texto, seprado entre comas y todo entre corchetes. Se puede usar un Heading (h1 a h6) o Paragraphs (p).
+<pre>.center[tag, text]</pre>
+Ejemplos
+<pre>.center[h1, Hola mundo]</pre>
+<pre>.center[h2, Hola mundo]</pre>
+<pre>.center[h3, Hola mundo]</pre>
+<pre>.center[h4, Hola mundo]</pre>
+<pre>.center[h5, Hola mundo]</pre>
+<pre>.center[h6, Hola mundo]</pre>
+<pre>.center[p, Hola mundo]</pre>
 
 #### InputBox
 ".inputbox" más texto opcional entre corchetes. El texto se mostrará a la izquierda del input.

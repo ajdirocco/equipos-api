@@ -37,7 +37,7 @@ La regla es sencialla, escriba "." y seguido el nombre del snippet.
 
 #### Section
 ".section" para navegar dentro del documento.
-<pre>t.section [section_name,sectionLabel]</pre>
+<pre>.section [section_name,sectionLabel]</pre>
 
 #### Select
 ".select" más una lista de texto separada por comas y entre corchetes. La primer coma representa el titulo.

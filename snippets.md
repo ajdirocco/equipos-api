@@ -15,6 +15,8 @@ Ejemplos
 <pre>.center[h5, Hola mundo]</pre>
 <pre>.center[h6, Hola mundo]</pre>
 <pre>.center[p, Hola mundo]</pre>
+Nota: este snippet agrega formato al texto para reducir el espacio entre lineas con el siguiente style:
+ style="margin-top:10px;margin-bottom:0px;"
 
 #### InputBox
 ".inputbox" más texto opcional entre corchetes. El texto se mostrará a la izquierda del input.

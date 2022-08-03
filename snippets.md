@@ -27,13 +27,13 @@ La regla es sencialla, escriba "." y seguido el nombre del snippet.
 ".radiobox" más una lista de texto separada por comas y entre corchetes. La primer coma representa el name (evita la multiselección de los radio buttons).
 <pre>.radiobox[name_radio,option-1,option-n]</pre>
 
-#### HyperLinkBlank
-"." más la URL y el nombre a mostrar. El link se abrirá en un nuevo tab del navegador.
-<pre>.https://google.com Google</pre>
+#### Link
+"a." más la URL y el nombre a mostrar. El link se abrirá en la misma ventana.
+<pre>a.https://google.com Google</pre>
 
-#### HyperLink
-".a" más la URL y el nombre a mostrar. El link se abrirá en la misma ventana.
-<pre>.a https://google.com Google</pre>
+#### LinkBlank
+"a.b." más la URL y el nombre a mostrar. El link se abrirá en un nuevo tab del navegador.
+<pre>a.b.https://google.com Google (new tab)</pre>
 
 #### Section
 ".section" para navegar dentro del documento.

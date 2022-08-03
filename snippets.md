@@ -10,12 +10,12 @@ La regla es sencialla, escriba "." y seguido el nombre del snippet.
 <pre>.center.p Soy un Paragraphs centrado</pre>
 
 #### InputBox
-".inputbox" más texto opcional a la izquierda. Anteponer "t" si deseamos un inputbox dentro de un table.
-<pre>.inputbox Ingrese un texto:</pre>
-<pre>t.inputbox</pre>
+".inputbox" más texto opcional entre corchetes. El texto se mostrará a la izquierda del input.
+<pre>.inputbox[]</pre>
+<pre>.inputbox[Ingrese un texto:]</pre>
 
 #### TextArea
-".textarea" más texto opcional entre corchetes. El texto se mostrará a la derecha del input.
+".textarea" más texto opcional entre corchetes. El texto se mostrará a la izquierda del input.
 <pre>.textarea[]</pre>
 <pre>.textarea[Ingrese un texto:]</pre>
 

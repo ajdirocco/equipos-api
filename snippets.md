@@ -41,7 +41,9 @@ La regla es sencialla, escriba "." y seguido el nombre del snippet.
 
 #### Select
 ".select" más una lista de texto separada por comas y entre corchetes. La primer coma representa el titulo.
-<pre>.select[titulo,,option-2,option-n]</pre>
+<pre>.select[title,option-1,option-n]</pre>
+ejemplo:
+<pre>.select[Saludos,,Hola,Como va, Que tal]</pre>
 
 #### Table - Markdown
 ".table.m" genera un snippet de table Markdown de dos columnas y dos filas.

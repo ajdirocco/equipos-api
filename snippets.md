@@ -15,12 +15,12 @@ La regla es sencialla, escriba "." y seguido el nombre del snippet.
 <pre>t.inputbox</pre>
 
 #### TextArea
-".textarea" más texto opcional a la izquierda. Anteponer "t" si deseamos un textarea dentro de un table.
-<pre>.textarea Ingrese un texto:</pre>
-<pre>t.textarea</pre>
+".textarea" más texto opcional entre corchetes. El texto se mostrará a la derecha del input.
+<pre>.textarea[]</pre>
+<pre>.textarea[Ingrese un texto:]</pre>
 
 #### CheckBox
-".checkbox" más texto opcional a la derecha entre corchetes. Puede generar más de un checkbox si los separa entre comas.
+".checkbox" más texto opcional entre corchetes. El texto se mostrará a la izquierda del input. Puede generar más de un checkbox si los separa entre comas.
 <pre>.checkbox[option-1,option-n]</pre>
 Ejemplos
 <pre>.checkbox[]</pre>

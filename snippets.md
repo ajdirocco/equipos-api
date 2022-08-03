@@ -1,7 +1,7 @@
 # Genera Aplicaciones - Utilidades
-## .Tags
+## Snippets
 <p>Escriba con Markdown y algunos snippets.</p>
-Los ".Tags" o snippets (fragmentos de código) representan de forma simplicada un tag HTML.
+Los snippets son fragmentos de texto que representan de forma simplicada un bloque HTML o Markdown a generar.
 La regla es sencialla, escriba "." y seguido el nombre del snippet.
 
 #### Center

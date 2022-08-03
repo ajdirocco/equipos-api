@@ -20,8 +20,12 @@ La regla es sencialla, escriba "." y seguido el nombre del snippet.
 <pre>t.textarea</pre>
 
 #### CheckBox
-".checkbox" más texto opcional a la derecha entre corchetes.
+".checkbox" más texto opcional a la derecha entre corchetes. Puede generar más de un checkbox si los separa entre comas.
+<pre>.checkbox[option-1,option-n]</pre>
+Ejemplos
+<pre>.checkbox[]</pre>
 <pre>.checkbox[Ok entendido]</pre>
+<pre>.checkbox[Manzana, Naranja, Frutilla]</pre>
 
 #### RadioBox
 ".radiobox" más una lista de texto separada por comas y entre corchetes. La primer coma representa el name (evita la multiselección de los radio buttons).
@@ -42,7 +46,7 @@ La regla es sencialla, escriba "." y seguido el nombre del snippet.
 #### Select
 ".select" más una lista de texto separada por comas y entre corchetes. La primer coma representa el titulo.
 <pre>.select[title,option-1,option-n]</pre>
-ejemplo:
+Ejemplo:
 <pre>.select[Saludos,,Hola,Como va, Que tal]</pre>
 
 #### Table - Markdown

@@ -67,5 +67,5 @@ Ejemplos
  <pre>style="margin-top:10px;margin-bottom:0px;"</pre>
 
 #### Comment
-".comment" agrega un comentario dentro del documento.
+".comment" agrega un comentario dentro del documento fuente.
 <pre>.comment</pre>

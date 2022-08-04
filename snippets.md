@@ -4,20 +4,6 @@
 Los snippets son fragmentos de texto que representan de forma simplicada un bloque HTML o Markdown a generar.
 La regla es sencialla, escriba "." y seguido el nombre del snippet.
 
-#### Center
-".center" más el elemento HTML a centrar con su texto, seprado entre comas y todo entre corchetes. Se puede usar un Heading (h1 a h6) o Paragraphs (p).
-<pre>.center[tag, text]</pre>
-Ejemplos
-<pre>.center[h1, Hola mundo]</pre>
-<pre>.center[h2, Hola mundo]</pre>
-<pre>.center[h3, Hola mundo]</pre>
-<pre>.center[h4, Hola mundo]</pre>
-<pre>.center[h5, Hola mundo]</pre>
-<pre>.center[h6, Hola mundo]</pre>
-<pre>.center[p, Hola mundo]</pre>
-**Nota:** este snippet agrega formato al texto para reducir el espacio entre lineas con el siguiente style:
- <pre>style="margin-top:10px;margin-bottom:0px;"</pre>
-
 #### InputBox
 ".inputbox" más texto opcional entre corchetes. El texto se mostrará a la izquierda del input.
 <pre>.inputbox[]</pre>
@@ -27,6 +13,12 @@ Ejemplos
 ".textarea" más texto opcional entre corchetes. El texto se mostrará a la izquierda del input.
 <pre>.textarea[]</pre>
 <pre>.textarea[Ingrese un texto:]</pre>
+
+#### Select
+".select" más una lista de texto separada por comas y entre corchetes. La primer coma representa el titulo.
+<pre>.select[title,option-1,option-n]</pre>
+Ejemplo:
+<pre>.select[Saludos,,Hola,Como va, Que tal]</pre>
 
 #### CheckBox
 ".checkbox" más texto opcional entre corchetes. El texto se mostrará a la izquierda del input. Puede generar más de un checkbox si los separa entre comas.
@@ -52,12 +44,6 @@ Ejemplos
 ".section" para navegar dentro del documento.
 <pre>.section[section_name,sectionLabel]</pre>
 
-#### Select
-".select" más una lista de texto separada por comas y entre corchetes. La primer coma representa el titulo.
-<pre>.select[title,option-1,option-n]</pre>
-Ejemplo:
-<pre>.select[Saludos,,Hola,Como va, Que tal]</pre>
-
 #### Table - Markdown
 ".table.m" genera un snippet de table Markdown de dos columnas y dos filas.
 <pre>.table.m</pre>
@@ -66,3 +52,20 @@ Ejemplo:
 ".table.h" genera un snippet de table HTML de tres columnas y dos filas.
 <pre>.table.h</pre>
 
+#### Center
+".center" más el elemento HTML a centrar con su texto, seprado entre comas y todo entre corchetes. Se puede usar un Heading (h1 a h6) o Paragraphs (p).
+<pre>.center[tag, text]</pre>
+Ejemplos
+<pre>.center[h1, Hola mundo]</pre>
+<pre>.center[h2, Hola mundo]</pre>
+<pre>.center[h3, Hola mundo]</pre>
+<pre>.center[h4, Hola mundo]</pre>
+<pre>.center[h5, Hola mundo]</pre>
+<pre>.center[h6, Hola mundo]</pre>
+<pre>.center[p, Hola mundo]</pre>
+**Nota:** este snippet agrega formato al texto para reducir el espacio entre lineas con el siguiente style:
+ <pre>style="margin-top:10px;margin-bottom:0px;"</pre>
+
+#### Comment
+".comment" agrega un comentario dentro del documento.
+<pre>.comment</pre>

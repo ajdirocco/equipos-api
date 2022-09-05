@@ -2,70 +2,92 @@
 ## Snippets
 <p>Escriba con Markdown y algunos snippets.</p>
 Los snippets son fragmentos de texto que representan de forma simplicada un bloque HTML o Markdown a generar.
-La regla es sencialla, escriba "." y seguido el nombre del snippet.
+La regla es sencialla, escriba "s." y seguido el nombre del snippet.
 
 #### InputBox
-".inputbox" más texto opcional entre corchetes. El texto se mostrará a la izquierda del input.
-<pre>.inputbox[]</pre>
-<pre>.inputbox[Ingrese un texto:]</pre>
+"s.inputbox" más texto opcional entre corchetes. El texto se mostrará a la izquierda del input.
+<pre>s.inputbox[]</pre>
+<pre>s.inputbox[Ingrese un texto:]</pre>
 
 #### TextArea
-".textarea" más texto opcional entre corchetes. El texto se mostrará a la izquierda del input.
-<pre>.textarea[]</pre>
-<pre>.textarea[Ingrese un texto:]</pre>
+"s.textarea" más texto opcional entre corchetes. El texto se mostrará a la izquierda del input.
+<pre>s.textarea[]</pre>
+<pre>s.textarea[Ingrese un texto:]</pre>
 
 #### Select
-".select" más una lista de texto separada por comas y entre corchetes. La primer coma representa el titulo.
+"s.select" más una lista de texto separada por comas y entre corchetes. La primer coma representa el titulo.
 <pre>.select[title,option-1,option-n]</pre>
 Ejemplo:
-<pre>.select[Saludos,,Hola,Como va, Que tal]</pre>
+<pre>s.select[Saludos,,Hola,Como va, Que tal]</pre>
 
 #### CheckBox
-".checkbox" más texto opcional entre corchetes. El texto se mostrará a la izquierda del input. Puede generar más de un checkbox si los separa entre comas.
+"s.checkbox" más texto opcional entre corchetes. El texto se mostrará a la izquierda del input. Puede generar más de un checkbox si los separa entre comas.
 <pre>.checkbox[option-1,option-n]</pre>
 Ejemplos
-<pre>.checkbox[]</pre>
-<pre>.checkbox[Ok entendido]</pre>
-<pre>.checkbox[Manzana, Naranja, Frutilla]</pre>
+<pre>s.checkbox[]</pre>
+<pre>s.checkbox[Ok entendido]</pre>
+<pre>s.checkbox[Manzana, Naranja, Frutilla]</pre>
 
 #### RadioBox
-".radiobox" más una lista de texto separada por comas y entre corchetes. La primer coma representa el name (evita la multiselección de los radio buttons).
-<pre>.radiobox[name_radio,option-1,option-n]</pre>
+"s.radiobox" más una lista de texto separada por comas y entre corchetes. La primer coma representa el name (evita la multiselección de los radio buttons).
+<pre>s.radiobox[name_radio,option-1,option-n]</pre>
 
 #### Link
-".a" más la URL y el nombre a mostrar, todo entre corchetes. El link se abrirá en la misma ventana.
-<pre>.a[https://google.com Google]</pre>
+"s.a" más la URL y el nombre a mostrar, todo entre corchetes. El link se abrirá en la misma ventana.
+<pre>s.a[https://google.com Google]</pre>
 
 #### LinkBlank
-".a.b" más la URL y el nombre a mostrar, todo entre corchetes. El link se abrirá en un nuevo tab del navegador.
+"s.a.b" más la URL y el nombre a mostrar, todo entre corchetes. El link se abrirá en un nuevo tab del navegador.
 <pre>.a.b[https://google.com Google (new Tab)]</pre>
 
 #### Section
-".section" para navegar dentro del documento.
+"s.section" para navegar dentro del documento.
 <pre>.section[section_name,sectionLabel]</pre>
 
 #### Table - Markdown
-".table.m" genera un snippet de table Markdown de dos columnas y dos filas.
-<pre>.table.m</pre>
+"s.table.m" genera un snippet de table Markdown de dos columnas y dos filas.
+<pre>s.table.m</pre>
 
 #### Table - HTML
-".table.h" genera un snippet de table HTML de tres columnas y dos filas.
-<pre>.table.h</pre>
+"s.table.h" genera un snippet de table HTML de tres columnas y dos filas.
+<pre>s.table.h</pre>
 
 #### Center
-".center" más el elemento HTML a centrar con su texto, seprado entre comas y todo entre corchetes. Se puede usar un Heading (h1 a h6) o Paragraphs (p).
+"s.center" más el elemento HTML a centrar con su texto, seprado entre comas y todo entre corchetes. Se puede usar un Heading (h1 a h6) o Paragraphs (p).
 <pre>.center[tag, text]</pre>
 Ejemplos
-<pre>.center[h1, Hola mundo]</pre>
-<pre>.center[h2, Hola mundo]</pre>
-<pre>.center[h3, Hola mundo]</pre>
-<pre>.center[h4, Hola mundo]</pre>
-<pre>.center[h5, Hola mundo]</pre>
-<pre>.center[h6, Hola mundo]</pre>
-<pre>.center[p, Hola mundo]</pre>
+<pre>s.center[h1, Hola mundo]</pre>
+<pre>s.center[h2, Hola mundo]</pre>
+<pre>s.center[h3, Hola mundo]</pre>
+<pre>s.center[h4, Hola mundo]</pre>
+<pre>s.center[h5, Hola mundo]</pre>
+<pre>s.center[h6, Hola mundo]</pre>
+<pre>s.center[p, Hola mundo]</pre>
 **Nota:** este snippet agrega formato al texto para reducir el espacio entre lineas con el siguiente style:
  <pre>style="margin-top:10px;margin-bottom:0px;"</pre>
 
 #### Comment
-".comment" agrega un comentario dentro del documento fuente.
-<pre>.comment</pre>
+"s.comment" agrega un comentario dentro del documento fuente.
+<pre>s.comment</pre>
+
+#### Form
+"s.form" genera un HTML form mas un boton que imprime todos los elementos mas sus valores que incluya dentro del form.
+<pre>s.form</pre>
+
+#### Button
+"s.button" genera un HTML button.
+<pre>s.button</pre>
+
+#### Date
+"s.button" genera un HTML date picker.
+<pre>s.date</pre>
+
+#### Time
+"s.button" genera un HTML time picker.
+<pre>s.time</pre>
+
+#### Color
+"s.color" genera un HTML color picker.
+<pre>s.color</pre>
+
+

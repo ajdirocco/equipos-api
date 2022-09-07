@@ -104,6 +104,7 @@ Ejemplos
 </pre>
 
 #### CRUD de table
+```
 "s.color" genera un HTML color picker.
 <pre>
 <form>
@@ -123,4 +124,5 @@ Ejemplos
 </table>
 <button class="gxButton" data-gx-html-target="target0" data-gx-crud-type="clone-clean" data-gx-form-index="0" data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;">Agregar</button>
 </form>
+```
 </pre>

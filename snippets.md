@@ -90,4 +90,37 @@ Ejemplos
 "s.color" genera un HTML color picker.
 <pre>s.color</pre>
 
+## Form - CRUD
+<p>Combinando los snippets y los HML data-* attribute puede generar un CRUD sobre los mismos elementos del documento.Vea los siguientes ejemplos:</p>
+#### CRUD de formulario
+"s.form" + "s.button" + data...
+<pre>
+<center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
+<form>
+<fieldset id="fieldset0">
+<label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxButton" data-gx-crud-type="remove" data-gx-form-index="0" data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
+<button class="gxButton" data-gx-crud-type="clone-clean" data-gx-form-index="0"  data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar</button>
+</form>
+</pre>
 
+#### CRUD de table
+"s.color" genera un HTML color picker.
+<pre>
+<form>
+<table>
+<tbody id="target0">
+  <tr>
+    <th>Columna 1</th>
+    <th>Columna 2</th>
+    <th>Columna 3</th>
+  </tr>
+  <tr id="fieldset0">
+    <td>hola</td>
+    <td>mundo</td>
+    <td>como va</td>
+  </tr>
+</tbody>
+</table>
+<button class="gxButton" data-gx-html-target="target0" data-gx-crud-type="clone-clean" data-gx-form-index="0" data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;">Agregar</button>
+</form>
+</pre>

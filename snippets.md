@@ -144,9 +144,9 @@ Indica el tipo de manipulación sobre los elementos HML:
  1. clone  
     Duplica los elementos HTML agrupados por otro elemento marcado con el atributo id="fieldsetN" (n = número de índice único).
  2. clone-clean  
-    la misma funcionalidad de clone pero limpia todos los imputs.
+    La misma funcionalidad de clone pero limpia todos los imputs.
  4. remove  
-    permite eliminar un grupo de elementos HTML.
+    Permite eliminar un grupo de elementos HTML.
 
 #### data-gx-fieldset-index
 Indica el index del fielset al que quiere hacer referencia. Recuede que para manipular un grupo de elementos a la vez debe encerrar dichos elementos por otro (div, fieldset, row, etc) y agregarle el atributo id con el siguiente formato:  

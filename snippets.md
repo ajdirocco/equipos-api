@@ -90,8 +90,8 @@ Ejemplos
 "s.color" genera un HTML color picker.
 <pre>s.color</pre>
 
-## Form - CRUD
-<p>Combinando los snippets y los HML data-* attribute puede generar un CRUD sobre los mismos elementos del documento.Vea los siguientes ejemplos:</p>
+## Form - CRUD (DOM)
+<p>Combinando los snippets y los HML data-* attribute puede generar un CRUD sobre los mismos elementos del documento de la página, es decir, se realiza la manipulación del DOM para agregar o quitar elementos HTML. Vea los siguientes ejemplos:</p>
 
 #### CRUD de formulario
 s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index
@@ -105,7 +105,7 @@ s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-in
 ```
 
 #### CRUD de table
-s.form + s.datatable + "s.button" + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index + data-gx-html-target
+s.form + s.datatable + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index + data-gx-html-target
 ```
 <form>
 <table>
@@ -126,3 +126,28 @@ s.form + s.datatable + "s.button" + data-gx-crud-type + data-gx-fieldset-index +
 </form>
 ```
 </pre>
+
+## HTML data-* attribute
+<p>Con los siguientes tags puede marcar el HTML y generar la funcionalidad de agregar o eliminar elementos:</p>
+
+#### data-gx-form-index
+Indica el index del form al que quiere hacer referencia.
+
+#### data-gx-html-target
+Indica el id del del elemento al que quiere hacer referencia. Se suele usar cuando se quiere hacer el insert o delete de elementos HTML que no estan agrupados en un fielset.
+
+#### data-gx-form-index
+Indica el index del form al que quiere hacer referencia.
+
+#### data-gx-crud-type
+Indica el tipo de manipulación sobre los elementos HML:
+ 1. clone
+    Duplica los elementos HTML agrupados por otro elemento marcado con el atributo id="fieldsetN" (n = número de índice único).
+ 2. clone-clean
+    la misma funcionalidad de clone pero limpia todos los imputs.
+ 4. remove
+    permite eliminar un grupo de elementos HTML.
+
+#### data-gx-fieldset-index
+Indica el index del fielset al que quiere hacer referencia. Recuede que para manipular un grupo de elementos a la vez debe encerrar dichos elementos por otro (div, fieldset, row, etc) y agregarle el atributo id con el siguiente formato:  
+ id="fieldsetN" (n = número de índice único).

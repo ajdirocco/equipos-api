@@ -1,0 +1,311 @@
+
+<html>
+    <head>
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    </head>
+
+    <style>
+        html {
+        margin: 30px;
+        }
+        
+        /*dark mode*/
+        body {
+        color: #222;
+        background: #fff;
+        font: 100% system-ui;
+        }
+        a {
+        color: #0033cc;
+        }
+
+        .bodyBlack {
+            color: #eee;
+            background: #121212;
+        }
+
+        .bodyBlack a {
+            color: #809fff;
+        }
+    </style>
+
+    <body x-data :class="$store.darkMode.on && 'bodyBlack'">
+
+        <div style="text-align: right;">
+                <button x-data @click="$store.darkMode.toggle()">Dark Mode</button>
+        </div>
+
+        <br>
+        <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message" style="text-align: center;"></h1>
+        
+        <div x-data="{ open: false }">
+            <h4 style="margin-bottom: 5px;">x-data - x-on (@click) - x-show - x-transition</h4>
+            <button @click="open = !open">Abrir</button>
+            <span x-show="open" x-transition>
+            Content...
+            </span>
+        </div>
+
+        <div x-data="{ open: false, dato: 'hola mundo' }">
+            <h4 style="margin-bottom: 5px;">x-text</h4>
+            <button @click="open = !open">Abrir</button>
+            <span x-show="open" x-transition>
+                <p x-text:="dato"></p>
+            </span>
+        </div>
+
+        <div x-data="{ open: false, dato: `<p>hola mundo</p>` }">
+            <h4 style="margin-bottom: 5px;">x-html</h4>
+            <button @click="open = !open">Abrir</button>
+            <span x-show="open">
+                <div x-html="dato"></div>
+            </span>
+        </div>
+
+        <div x-data="{ open: false, search: '' }">
+            <h4 style="margin-bottom: 5px;">bind: x-model - x-text</h4>
+            <button @click="open = !open">Abrir</button>
+            <span x-show="open">
+                <div style="padding-top: 10px;">
+                    <input type="text" x-model="search" placeholder="hola mundo...">
+                    ingresando: <span x-text="search"></span>
+                </div>
+            </span>
+        </div>     
+        
+        <div x-data="{ open: false }">
+            <h4 style="margin-bottom: 5px;">Alpine.data (ej: dropdown)</h4>
+            <button @click="open = !open">Abrir</button>
+            <span x-show="open" x-transition>
+                <div x-data="dropdown" style="padding-top: 10px;">
+                    <button @click="toggle">Click expand...</button>
+                    <div x-show="open" style="padding-top: 10px;">Hola mundo</div>
+                </div>
+            </span>
+        </div>
+
+        <div x-data="{ open: false }">
+            <h4 style="margin-bottom: 5px;">$refs - x-ref - (ej: remove)</h4>
+            <button @click="open = !open">Abrir</button>
+            <span x-show="open" x-transition>
+                <button @click="$refs.text.remove()">Remove Text</button>
+                <span x-ref="text">Hello 👋</span>
+            </span>
+        </div>
+
+        <div x-data="{ open: false, posts: [{saludo: 'hola'}, {saludo: 'mundo'}, {saludo: 'chau'}] }">
+            <h4 style="margin-bottom: 5px;">x-if</h4>
+            <button @click="open = !open">Abrir</button>
+            <span x-show="open" x-transition>
+                <div x-data="{ status: '' }">
+                    <p><strong>Change Product Status By Clicking Button</strong></p>
+                    <button @click="status = 'active'">Active</button>
+                    <button @click="status = 'inactive'">InActive</button>
+                
+                    <template x-if="status == 'active'">
+                        <p>Product is active.</p>
+                    </template>
+                
+                    <template x-if="status == 'inactive'">
+                        <p>Product is inactive.</p>
+                    </template>
+                
+                </div>
+            </span>
+        </div>
+
+        <div x-data="{ open: false }">
+            <h4 style="margin-bottom: 5px;">array: x-for - (ej: select)</h4>
+            <button @click="open = !open">Abrir</button>
+            <span x-show="open" x-transition>
+                <div class="w-full" x-data="{ frutas: ['Banana', 'Orange', 'Apple', 'Mango'] }" style="padding-top: 10px;">
+                    <select name="" id="">
+                        <template x-for="fruta in frutas">
+                            <option x-text="fruta" :value="fruta"></option>
+                        </template>
+                    </select>
+                </div>
+            </span>
+        </div>
+
+        <div x-data="{ open: false }">
+            <h4 style="margin-bottom: 5px;">array: x-for - x-effect - (ej: select)</h4>
+            <button @click="open = !open">Abrir</button>
+            <span x-show="open" x-transition>
+                <div x-data="{ open: false, frutas: ['Banana', 'Orange', 'Apple', 'Mango'] }">
+                    <template x-for="fruta in frutas">
+                        <h4 x-text="fruta" x-effect="console.log('fruta is ' + fruta)"></h4>
+                    </template>
+                </div>
+            </span>
+        </div>        
+
+        <div x-data="{ open: false }">
+            <h4 style="margin-bottom: 5px;">objects array: x-for - :key - (ej: select)</h4>
+            <button @click="open = !open">Abrir</button>
+            <span x-show="open" x-transition>
+                <div class="w-full" x-data="{ classes: [{room: 'online',id: 1,},{room: 'in class',id: 2,}] }" style="padding-top: 10px;">
+                    <select name="" id="">
+                        <template x-for="cls in classes" :key="cls.id">
+                            <option x-text="cls.room" :value="cls.room"></option>
+                        </template>
+                    </select>
+                </div>
+            </span>
+        </div>
+
+        <div x-data="{ open: false }">
+            <h4 style="margin-bottom: 5px;">array: variable global</h4>
+            <h6 style="margin-top: 5px; margin-bottom: 5px;">Dicha variable no es manejada por alpine y por ende no funciona el update del array y su correspondiente actualizacion en pantalla.</h6>
+            <button @click="open = !open">Abrir</button>
+            <span x-show="open" x-transition>
+                <div x-data="{ descs: descripciones }">
+                    <template x-for="desc in descs">
+                        <h3 x-text="desc.description" x-effect="console.log('description is ' + desc.description)"></h3>
+                    </template>
+                </div>
+            </span>
+        </div>
+        
+        <div x-data="{ open: false, posts: [{saludo: 'hola'}, {saludo: 'mundo'}, {saludo: 'chau'}] }">
+            <h4 style="margin-bottom: 5px;">objects array: x-for - x-if - x-effect</h4>
+            <button @click="open = !open">Abrir</button>
+            <span x-show="open" x-transition>
+                <template x-for="post in posts">
+                <template x-if="post.saludo != 'mundo'">
+                        <h2 x-text="post.saludo" x-effect="console.log('post.saludo is ' + post.saludo)"></h2>
+                    </template>
+                </template>
+            </span>
+        </div>
+
+        <div x-data="{ open: false }">
+            <h4 style="margin-bottom: 5px;">array update: x-data - x-cloak - x-on (@click)</h4>
+            <h6 style="margin-top: 5px; margin-bottom: 5px;">Un form es cargado y con esos datos actualizo el array reflejandose en la lista.</h6>
+            <button @click="open = !open">Abrir</button>
+            <span x-show="open" x-transition>
+                <form x-data="{ saludos: [{saludo: 'mundo'}, {saludo: 'chau'}] }" x-cloak>
+                    <fieldset>  
+                        <input type="text" name="saludo" style="border-radius:0.25rem;border-width:1px;border-color:black"><br>
+                    </fieldset>  
+                    <button type="button"  
+                        style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;"  
+                        @click="let data = new FormData(document.forms[0]);console.log(Object.fromEntries(data.entries())); saludos.push(Object.fromEntries(data.entries())); console.log('saludos:', saludos)">Agregar
+                    </button>
+                    <table id="tbl-data">
+                        <thead>
+                            <tr>
+                                <th>Saludos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template x-for="(d, i) in saludos" :key="saludos[i].saludo">
+                                <tr>
+                                    <td x-text="saludos[i].saludo"></td>
+                                </tr>                    
+                            </template>                
+                        </tbody>            
+                    </table>                    
+                </form>
+            </span>
+        </div>   
+        
+        <!-- no anda tomar un array o array de objetos de un alpine.data -->
+            <!-- <br>
+            <div x-data="{ open: false }">
+                <button @click="open = !open">Abrir</button>
+                <span x-show="open" x-transition>
+                    <div x-data="{ fruits: datos.fruits }">
+                        <template x-for="fruit in fruits">
+                            <h3 x-text="fruit" x-effect="console.log('fruit is ' + fruit)"></h3>
+                        </template>
+                    </div>
+                </span>
+            </div>   -->
+                
+        <!-- no anda *1 -->
+            <!-- no se actualiza cuando agrego un nuevo elemento con el form anterior (usando la variable saludos *1 no datos.saludos) -->
+            <!--
+            <br>
+            <div x-data="{ open: false }">
+                <button @click="open = !open">Abrir</button>
+                <span x-show="open" x-transition>
+                    <form>
+                        <fieldset>  
+                            <input type="text" name="saludo" style="border-radius:0.25rem;border-width:1px;border-color:black"><br>
+                        </fieldset>  
+                        <button type="button"  
+                            style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;"  
+                            onclick="let data = new FormData(document.forms[0]);console.log(Object.fromEntries(data.entries())); saludos.push(Object.fromEntries(data.entries())); console.log('saludos:', saludos)">Datos
+                        </button>
+                        <table id="tbl-data">
+                            <thead>
+                                <tr>
+                                    <th>Saludos</th>
+                                </tr>
+                            </thead>
+                            <tbody x-data="{ data: datos.saludos }" x-cloak>
+                                <template x-for="(d, i) in data" :key="data[i].saludo">
+                                    <tr>
+                                        <td x-text="data[i].saludo"></td>
+                                    </tr>                    
+                                </template>                
+                            </tbody>            
+                        </table>                    
+                    </form>
+                </span>
+            </div> 
+            -->
+
+        <!-- template
+        <div x-data="{ open: false }">
+            <h4 style="margin-bottom: 5px;">titulo</h4>
+            <button @click="open = !open">Abrir</button>
+            <span x-show="open" x-transition>
+                ...
+            </span>
+        </div>
+        fin template -->
+        <script>
+            let descripciones = [
+            { name: 'Test 1', description: 'Test Description 1' },
+            { name: 'Test 2', description: 'Test Description 2' },
+            { name: 'Test 3', description: 'Test Description 3' },
+            { name: 'Test 4', description: 'Test Description 4' },
+            { name: 'Test 5', description: 'Test Description 5' },
+            ];      
+            
+            //no anda *1
+                //let saludos = [{saludo: 'mundo'}, {saludo: 'chau'}]
+                //tener en cuenta que anda para mostrar pero no funciona la actualizacion de la pantalla si agregamos un dato con push
+                
+                //el Alpine.data datos no funciona ni para mostrar ni para actualizar. para hacerlo asi ver el ejemplo:
+                //https://codepen.io/ryangjchandler/pen/qBOEgjg
+                //por otro lado el tema quedo pendiente porque en realidad quiero resolver todo desde html y no desde javascript pero estaba viendo estas paginas y la documentacion
+                //https://github.com/alpinejs/alpine/discussions/1192
+                //https://anjanesh.dev/displaying-data-an-array-of-objects-using-alpine-js-in-a-table
+                //https://technotrampoline.com/articles/working-with-arrays-in-alpinejs-stores/
+                //https://github.com/alpinejs/alpine/discussions/2456
+            document.addEventListener('alpine:init', () => {
+                Alpine.data('dropdown', () => ({
+                    open: false,
+                    toggle() {
+                        this.open = ! this.open
+                    }
+                })),
+                Alpine.data('datos', () => ({
+                    hola: "mundo",
+                    classes: [{room: 'online',id: 1,},{room: 'in class',id: 2,}],
+                    saludos: [{saludo: 'mundo'}, {saludo: 'chau'}],
+                    fruits: ["Banana", "Orange", "Apple", "Mango"]
+                })),
+                Alpine.store('darkMode', {
+                    on: false,
+                    toggle() {
+                        this.on = ! this.on
+                    }
+                })
+            })
+        </script>    
+    </body>
+</html>

@@ -151,3 +151,6 @@ Indica el tipo de manipulación sobre los elementos HML:
 #### data-gx-fieldset-index
 Indica el index del fielset al que quiere hacer referencia. Recuede que para manipular un grupo de elementos a la vez debe encerrar dichos elementos por otro (div, fieldset, row, etc) y agregarle el atributo id con el siguiente formato:  
  id="fieldsetN" (n = número de índice único).
+
+## Persistencia
+<p>Hasta el momento los elementos HTML sobre los que se persiste su valor son los input que tienen la propiedad value. Por ejemplo para el checkbox o radio hasta el momento solo se persiste su HTML pero no su value.</p>

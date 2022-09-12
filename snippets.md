@@ -125,7 +125,6 @@ s.form + s.datatable + s.button + data-gx-crud-type + data-gx-fieldset-index + d
 <button class="gxButton" data-gx-html-target="target0" data-gx-crud-type="clone-clean" data-gx-form-index="0" data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;">Agregar</button>
 </form>
 ```
-</pre>
 
 ## HTML data-* attribute
 <p>Con los siguientes tags puede marcar el HTML y generar la funcionalidad de agregar o eliminar elementos:</p>
@@ -154,3 +153,18 @@ Indica el index del fielset al que quiere hacer referencia. Recuede que para man
 
 ## Persistencia
 <p>Hasta el momento los elementos HTML sobre los que se persiste su valor son los input que tienen la propiedad value. Por ejemplo para el checkbox o radio hasta el momento solo se persiste su HTML pero no su value.</p>
+
+## Librerias externas
+<p>generaForms y generaCRUD por defecto soportan Alpinejs y Tailwindcss.</p>
+```
+ <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message" style="text-align: center;"></h1>
+
+<a href="" class="block overflow-hidden rounded-2xl" >
+  <img style="margin-bottom: 0px;margin-top: 0px;"class="object-cover w-full h-56" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="" />
+ <div class="p-4 bg-gray-900">
+ <p class="text-xs text-gray-500">website.com</p>
+<h5 class="text-sm text-white">How to position your furniture for positivity</h5>
+<p class="mt-1 text-xs text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum nobis aliquid accusamus? Sint, sequi voluptas.</p>
+ </div>
+</a>
+```

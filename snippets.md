@@ -156,9 +156,9 @@ Indica el index del fielset al que quiere hacer referencia. Recuede que para man
 
 ## Librerias externas
 <p>generaForms y generaCRUD por defecto soportan Alpinejs y Tailwindcss.</p>
-```
- <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message" style="text-align: center;"></h1>
 
+```
+<h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message" style="text-align: center;"></h1>
 <a href="" class="block overflow-hidden rounded-2xl" >
   <img style="margin-bottom: 0px;margin-top: 0px;"class="object-cover w-full h-56" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="" />
  <div class="p-4 bg-gray-900">

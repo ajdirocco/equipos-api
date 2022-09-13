@@ -152,7 +152,7 @@ Indica el index del fielset al que quiere hacer referencia. Recuede que para man
  id="fieldsetN" (n = número de índice único).
 
 ## Persistencia
-<p>Se persiste los elementos HTML que se encuentren dentro de un HTML form.</p>
+<p>Se persiste los elementos HTML que se encuentren dentro de un HTML form y que posean el atributo name.</p>
 <p>Hasta el momento los elementos HTML sobre los que se persiste su valor son los input que tienen la propiedad value. Por ejemplo para el checkbox o radio hasta el momento solo se persiste su HTML pero no su value.</p>
 
 ## Librerias externas

@@ -152,7 +152,7 @@ Indica el index del fielset al que quiere hacer referencia. Recuede que para man
  id="fieldsetN" (n = número de índice único).
 
 ## Persistencia
-<p>Se persiste los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name.</p>
+<p>Se persiste el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name.</p>
 
 ## Librerias externas
 <p>generaForms y generaCRUD por defecto soportan Alpinejs, Persist Plugin y Tailwindcss.</p>

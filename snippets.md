@@ -152,11 +152,10 @@ Indica el index del fielset al que quiere hacer referencia. Recuede que para man
  id="fieldsetN" (n = número de índice único).
 
 ## Persistencia
-<p>Se persiste los elementos HTML que se encuentren dentro de un HTML form y que posean el atributo name.</p>
-<p>Hasta el momento los elementos HTML sobre los que se persiste su valor son los input que tienen la propiedad value. Por ejemplo para el checkbox o radio hasta el momento solo se persiste su HTML pero no su value.</p>
+<p>Se persiste los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name.</p>
 
 ## Librerias externas
-<p>generaForms y generaCRUD por defecto soportan Alpinejs y Tailwindcss.</p>
+<p>generaForms y generaCRUD por defecto soportan Alpinejs, Persist Plugin y Tailwindcss.</p>
 
 ```
 <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message" style="text-align: center;"></h1>

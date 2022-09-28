@@ -174,7 +174,7 @@ Indica el index del fielset al que quiere hacer referencia. Recuede que para man
 #### ga-disabled
 esta clase desabilita todo el conjunto de elementos contenidos dentro de otro elemento HTML.
 ```
-<form class="ga-disabled">
+<form class="ga-disabled" action="/action_page.php">
   <label for="fname">First name:</label>
   <input type="text" id="fname" name="fname"><br><br>
   <label for="lname">Last name:</label>

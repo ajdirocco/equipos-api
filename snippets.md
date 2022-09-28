@@ -168,3 +168,17 @@ Indica el index del fielset al que quiere hacer referencia. Recuede que para man
  </div>
 </a>
 ```
+## Form css
+<p>generaForms y generaCRUD posee su propio css (/static/form.css) con las siguientes clases:</p>
+
+#### ga-disabled
+esta clase desabilita todo el conjunto de elementos contenidos dentro de otro elemento HTML.
+```
+<form class="ga-disabled">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+```

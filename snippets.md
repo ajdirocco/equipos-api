@@ -133,7 +133,7 @@ s.form + s.datatable + s.button + data-gx-crud-type + data-gx-fieldset-index + d
 Indica el index del form al que quiere hacer referencia.
 
 #### data-gx-html-target
-Indica el id del del elemento al que quiere hacer referencia. Se suele usar cuando se quiere hacer el insert o delete de elementos HTML que no estan agrupados en un fielset.
+Indica el id del del elemento al que quiere hacer referencia. Se suele usar cuando se quiere hacer el insert o delete de elementos HTML que no estan agrupados en un fielset o el fieldset se encuentra anidado o dentro de un elemento que no puede cortarse con fieldset, por ejemplo un table.
 
 #### data-gx-form-index
 Indica el index del form al que quiere hacer referencia.

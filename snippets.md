@@ -169,7 +169,7 @@ Indica el index del fielset al que quiere hacer referencia. Recuede que para man
 </a>
 ```
 ## Form css
-<p>generaForms y generaCRUD poseen su propio css (/static/form.css) con las siguientes clases:</p>
+<p>generaForms y generaCRUD poseen su propio css (static/form.css) con las siguientes clases:</p>
 
 #### ga-disabled
 esta clase desabilita todo el conjunto de elementos contenidos dentro de otro elemento HTML.

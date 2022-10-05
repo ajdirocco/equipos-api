@@ -155,7 +155,7 @@ Indica el index del fielset al que quiere hacer referencia. Recuede que para man
 <p>Se persiste el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name.</p>
 
 ## Librerias externas
-<p>generaForms y generaCRUD por defecto soportan Alpinejs, Persist Plugin y Tailwindcss.</p>
+<p>generaForms y generaCRUD por defecto soportan Alpinejs y Tailwindcss.</p>
 
 ```
 <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message" style="text-align: center;"></h1>

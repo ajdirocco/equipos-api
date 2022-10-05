@@ -1,4 +1,4 @@
-# Genera Aplicaciones - Utilidades
+# Genera Forms - Utilidades
 ## Snippets
 <p>Escriba con Markdown y algunos snippets.</p>
 Los snippets son fragmentos de texto que representan de forma simplicada un bloque HTML o Markdown a generar.

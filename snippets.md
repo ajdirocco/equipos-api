@@ -157,8 +157,8 @@ Atributo para persistir los datos del form en [JSONBlob](https://jsonblob.com/) 
 ## Persistencia
 ### Local
 <p>Se persiste el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name en el localStorage de cada dispositivo.</p>
-### JSONBob
-<p>Se persiste el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name más el HTML data-* attribute **data-gx-form-persist.</p>
+### JSONBlob
+<p>Se persiste el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name más el HTML data-* attribute <b>data-gx-form-persist</b>.</p>
 
 ## Librerias externas
 <p>generaForms y generaCRUD por defecto soportan Alpinejs y Tailwindcss.</p>

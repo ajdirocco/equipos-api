@@ -159,7 +159,7 @@ Atributo para persistir los datos del form en [JSONBlob](https://jsonblob.com/) 
 <p>Se persiste el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name en el localStorage de cada dispositivo.</p>
 
 ### JSONBlob
-<p>Se persiste en [adapter](https://kit.svelte.dev/docs/adapters)  el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name más el HTML data-* attribute <b>data-gx-form-persist</b> cuyo valor se completará automáticamente al momento de exportar el Form con el id correspondiente.</p>
+Se persiste en [JSONBlob](https://jsonblob.com/) el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name más el HTML data-* attribute <b>data-gx-form-persist</b> cuyo valor se completará automáticamente al momento de exportar el Form con el id correspondiente.
 
 ## Librerias externas
 <p>generaForms y generaCRUD por defecto soportan Alpinejs y Tailwindcss.</p>

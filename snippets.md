@@ -159,7 +159,7 @@ Atributo para persistir los datos del form en [JSONBlob](https://jsonblob.com/) 
 Se persiste en [JSONBlob](https://jsonblob.com/) el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name más el HTML data-* attribute <b>data-gx-form-persist</b> cuyo valor se completará automáticamente al momento de exportar el Form con el id correspondiente.
 
 #### CRUD de formulario + persistencia en JSONBLob
-<p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form:</p>
+<p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form en JSONBLob:</p>
 
 <p>s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index + data-gx-form-persist</p>
  

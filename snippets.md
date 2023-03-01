@@ -150,9 +150,15 @@ Indica el tipo de manipulación sobre los elementos HML:
 #### data-gx-fieldset-index
 Indica el index del fielset al que quiere hacer referencia. Recuede que para manipular un grupo de elementos a la vez debe encerrar dichos elementos por otro (div, fieldset, row, etc) y agregarle el atributo id con el siguiente formato:  
  id="fieldsetN" (n = número de índice único).
+ 
+#### data-gx-form-persist
+Atributo para persistir los datos del form en [JSONBlob](https://jsonblob.com/) (ver para más detalle [Persistencia - JSONBlob](#JSONBob))
 
 ## Persistencia
-<p>Se persiste el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name.</p>
+### Local
+<p>Se persiste el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name en el localStorage de cada dispositivo.</p>
+### JSONBob
+<p>Se persiste el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name más el HTML data-* attribute **data-gx-form-persist.</p>
 
 ## Librerias externas
 <p>generaForms y generaCRUD por defecto soportan Alpinejs y Tailwindcss.</p>

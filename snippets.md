@@ -153,10 +153,22 @@ Atributo para persistir los datos del form en [JSONBlob](https://jsonblob.com/) 
 
 ## Persistencia
 ### Local
-<p>Se persiste el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name en el localStorage de cada dispositivo.</p>
+<p>Por defecto se persiste el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name en el localStorage de cada dispositivo.</p>
 
 ### JSONBlob
 Se persiste en [JSONBlob](https://jsonblob.com/) el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name más el HTML data-* attribute <b>data-gx-form-persist</b> cuyo valor se completará automáticamente al momento de exportar el Form con el id correspondiente.
+
+#### CRUD de formulario + persistencia en JSONBLob
+<p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form:</p>
+s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index + data-gx-form-persist
+```
+<center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
+<form>
+<fieldset id="fieldset0">
+<label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxButton" data-gx-crud-type="remove" data-gx-form-index="0" data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
+<button class="gxButton" data-gx-crud-type="clone-clean" data-gx-form-index="0"  data-gx-fieldset-index="0" data-gx-form-persist type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar</button>
+</form>
+```
 
 ## Librerias externas
 <p>generaForms y generaCRUD por defecto soportan Alpinejs y Tailwindcss.</p>

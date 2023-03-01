@@ -152,7 +152,7 @@ Indica el index del fielset al que quiere hacer referencia. Recuede que para man
  id="fieldsetN" (n = número de índice único).
  
 #### data-gx-form-persist
-Atributo para persistir los datos del form en [JSONBlob](https://jsonblob.com/) (ver para más detalle [Persistencia - JSONBlob](##### InputBox))
+Atributo para persistir los datos del form en [JSONBlob](https://jsonblob.com/) (ver para más detalle [Persistencia - JSONBlob](#InputBox))
 
 ## Persistencia
 ### Local

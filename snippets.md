@@ -160,7 +160,9 @@ Se persiste en [JSONBlob](https://jsonblob.com/) el valor de los HTML inputs que
 
 #### CRUD de formulario + persistencia en JSONBLob
 <p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form:</p>
-s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index + data-gx-form-persist
+
+<p>s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index + data-gx-form-persist</p>
+ 
 ```
 <center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
 <form>

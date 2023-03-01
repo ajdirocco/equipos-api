@@ -91,7 +91,7 @@ Ejemplos
 <pre>s.color</pre>
 
 ## Form - CRUD (DOM)
-<p>Combinando los snippets y los HML data-* attribute puede generar un CRUD sobre los mismos elementos del documento de la página, es decir, se realiza la manipulación del DOM para agregar o quitar elementos HTML. Vea los siguientes ejemplos:</p>
+<p>Combinando los snippets y los HML data-* attribute se puede realizar la manipulación del DOM para agregar o quitar elementos HTML. Vea los siguientes ejemplos:</p>
 
 #### CRUD de formulario
 s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index
@@ -134,9 +134,6 @@ Indica el index del form al que quiere hacer referencia.
 
 #### data-gx-html-target
 Indica el id del del elemento al que quiere hacer referencia. Se suele usar cuando se quiere hacer el insert o delete de elementos HTML que no estan agrupados en un fielset o el fieldset se encuentra anidado o dentro de un elemento que no puede cortarse con fieldset, por ejemplo un table.
-
-#### data-gx-form-index
-Indica el index del form al que quiere hacer referencia.
 
 #### data-gx-crud-type
 Indica el tipo de manipulación sobre los elementos HML:

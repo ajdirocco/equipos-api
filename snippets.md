@@ -94,7 +94,7 @@ Ejemplos
 <p>Combinando los snippets y los HML data-* attribute se puede realizar la manipulación del DOM para agregar o quitar elementos HTML. Vea los siguientes ejemplos:</p>
 
 #### CRUD de formulario
-s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index
+s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index. El CRUD se ejecuta en el click de un elemento marcado con el class "gxButton".
 ```
 <center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
 <form>

@@ -148,29 +148,50 @@ Indica el tipo de manipulación sobre los elementos HML:
 Indica el index del fielset al que quiere hacer referencia. Recuede que para manipular un grupo de elementos a la vez debe encerrar dichos elementos por otro (div, fieldset, row, etc) y agregarle el atributo id con el siguiente formato:  
  id="fieldsetN" (n = número de índice único).
  
-#### data-gx-form-persist
-Atributo para persistir los datos del form en [JSONBlob](https://jsonblob.com/) (Ver detalle: [Persistencia - JSONBlob](#JSONBlob))
+#### data-gx-form-gist
+Atributo necesario para persistir los datos del form en [GitHub Gist](https://gist.github.com/) (Ver detalle: [Persistencia - GitHub Gist](#GitHub Gist). Representa el nombre del gist. Se debe referenciar dentro del HTML tag form.
+
+#### data-gx-form-gist-file
+Atributo para persistir los datos del form en [GitHub Gist](https://gist.github.com/). Representa el nombre de un file dentro de un gist. Se debe referenciar dentro del HTML tag fieldset del form. Se puede especificar un file distinto para cada fieldset, si no se especifica ninguno se crea un file por defecto que contiene todos los campos del form exista o no un HTML tag fieldset.
 
 ## Persistencia
 ### Local
 <p>Por defecto se persiste el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name en el localStorage de cada dispositivo.</p>
 
-### JSONBlob
-Se persiste en [JSONBlob](https://jsonblob.com/) el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name más el HTML data-* attribute <b>data-gx-form-persist</b> cuyo valor se completará automáticamente al momento de exportar el Form con el id correspondiente.
+### GitHub Gist
+Se persiste en [GitHub Gist](https://gist.github.com/) el valor de los HTML inputs que posean el atributo name y que se encuentren dentro de un HTML form. Dicho form debe tener el atributo [data-gx-form-gist](#data-gx-form-gist) que representa un gist especifico y puede o no tener HTML tags fieldset para agrupar los datos, si los posee se puede utilizar el atributo [data-gx-form-gist-file](#data-gx-form-gist) para especificar, si se desea, un gist file por cada fieldset, si no se especifica ninguno se grabaran todos los inputs en un solo file.
 
-#### CRUD de formulario + persistencia en JSONBLob
-<p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form en JSONBLob:</p>
+#### Ejemplos de CRUD de formulario + persistencia en [GitHub Gist](https://gist.github.com/)
+<p><b>Un gist y un solo file</b></p>
+<p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form en GitHub Gist. Lo persiste todo en un solo gist file por defecto.</p>
 
-<p>s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index + data-gx-form-persist</p>
+<p>s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index + data-gx-form-gist</p>
  
 ```
 <center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
-<form>
-<fieldset id="fieldset0">
+<form data-gx-form-gist="GIST-NAME">
+<fieldset id="fieldset0" data-gx-form-gist-file="FILE-NAME-0">
 <label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxButton" data-gx-crud-type="remove" data-gx-form-index="0" data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
-<button class="gxButton" data-gx-crud-type="clone-clean" data-gx-form-index="0"  data-gx-fieldset-index="0" data-gx-form-persist type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar</button>
+<button class="gxButton" data-gx-crud-type="clone-clean" data-gx-form-index="0"  data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar Grupo 1</button>
+<fieldset id="fieldset1" data-gx-form-gist-file="FILE-NAME-1">
+<label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox1" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxButton" data-gx-crud-type="remove" data-gx-form-index="0" data-gx-fieldset-index="1" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
+<button class="gxButton" data-gx-crud-type="clone-clean" data-gx-form-index="1"  data-gx-fieldset-index="1" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar Grupo 2</button>
 </form>
 ```
+<p><b>Un gist y dos files</b></p>
+<p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form en GitHub Gist. Lo persiste todo en un solo gist file por defecto.</p>
+
+<p>s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index + data-gx-form-gist</p>
+ 
+```
+<center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
+<form data-gx-form-gist="GIST-NAME">
+<fieldset id="fieldset0">
+<label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxButton" data-gx-crud-type="remove" data-gx-form-index="0" data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
+<button class="gxButton" data-gx-crud-type="clone-clean" data-gx-form-index="0"  data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar</button>
+</form>
+```
+
 
 ## Librerias externas
 <p>generaForms y generaCRUD por defecto soportan Alpinejs y Tailwindcss.</p>

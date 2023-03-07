@@ -166,6 +166,20 @@ Se persiste en [GitHub Gist](https://gist.github.com/) el valor de los HTML inpu
 <p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form en GitHub Gist. Lo persiste todo en un solo gist file por defecto.</p>
 
 <p>s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index + data-gx-form-gist</p>
+
+```
+<center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
+<form data-gx-form-gist="GIST-NAME">
+<fieldset id="fieldset0">
+<label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxButton" data-gx-crud-type="remove" data-gx-form-index="0" data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
+<button class="gxButton" data-gx-crud-type="clone-clean" data-gx-form-index="0"  data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar</button>
+</form>
+```
+
+<p><b>Un gist y dos files</b></p>
+<p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form en GitHub Gist. Lo persiste todo en un solo gist file por defecto.</p>
+
+<p>s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index + data-gx-form-gist</p>
  
 ```
 <center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
@@ -178,20 +192,6 @@ Se persiste en [GitHub Gist](https://gist.github.com/) el valor de los HTML inpu
 <button class="gxButton" data-gx-crud-type="clone-clean" data-gx-form-index="1"  data-gx-fieldset-index="1" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar Grupo 2</button>
 </form>
 ```
-<p><b>Un gist y dos files</b></p>
-<p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form en GitHub Gist. Lo persiste todo en un solo gist file por defecto.</p>
-
-<p>s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index + data-gx-form-gist</p>
- 
-```
-<center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
-<form data-gx-form-gist="GIST-NAME">
-<fieldset id="fieldset0">
-<label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxButton" data-gx-crud-type="remove" data-gx-form-index="0" data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
-<button class="gxButton" data-gx-crud-type="clone-clean" data-gx-form-index="0"  data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar</button>
-</form>
-```
-
 
 ## Librerias externas
 <p>generaForms y generaCRUD por defecto soportan Alpinejs y Tailwindcss.</p>

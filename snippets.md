@@ -104,20 +104,20 @@ Indica el id del elemento al que se le aplicará el data-gx-type, pudiendo ser a
 
 #### data-gx-type
 Indica el tipo de manipulación sobre los elementos HML:
- 1. clone
+ 1. <b>clone</b>:
     Duplica el elemento, junto con su valor (propiedad value), referenciado con data-gx-target.
- 2. clone-clean  
+ 2. <b>clone-clean</b>:
     La misma funcionalidad de clone pero limpia todos los imputs (deja vacia su propiedad value).
- 3. remove  
+ 3. <b>remove</b>:
     Permite eliminar el elemento referenciado en data-gx-target.
 
 #### data-gx-insert
 Indica donde se quiere insertar un elemento clonado
- 1. before
+ 1. <b>before</b>:
     se inserta antes del elemento referenciado en data-gx-target.
- 2. after
+ 2. <b>after</b>:
     se inserta despues del elemento referenciado en data-gx-target.
- 3. child
+ 3. <b>child</b>:
     se inserta luego del último elemento hijo del elemento padre referenciado en data-gx-target. Es el valor por defecto si no se especifica el atributo data-gx-insert.
 
 ### Atributos de persistencia

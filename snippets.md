@@ -90,11 +90,11 @@ Ejemplos
 "s.color" genera un HTML color picker.
 <pre>s.color</pre>
 
-## HTML data-* attribute y clases
+## HTML data-* attribute y class
 <p>Con los siguientes tags y class puede marcar el HTML y generar la funcionalidad de agregar o eliminar elementos y tambien puede persistir sus valores</p>
 
 ### Clases
-Con el class <b>gxTrigger</(b> puede marcar un elemento HTML para que ejecute el agregado o eliminación de un elemento referenciado con el atributo con data-gx-target.
+Con el class <b>gxTrigger</b> puede marcar un elemento HTML para que ejecute el agregado o eliminación de un elemento referenciado con el atributo con data-gx-target.
 
 ### Atributos de manipulación
 <p>Permiten clonar o eliminar elementos HTML directamente del DOM.</p>

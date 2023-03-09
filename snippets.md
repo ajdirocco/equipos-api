@@ -121,7 +121,7 @@ Indica donde se quiere insertar un elemento clonado
     se inserta luego del último elemento hijo del elemento padre referenciado en data-gx-target. Es el valor por defecto si no se especifica el atributo data-gx-insert.
 
 ### Atributos de persistencia
-<p>Permiten guardar los valores de los elementos HTML. Dicha persistencia se realiza utlizando como repositorio [GitHub Gist](https://gist.github.com/).</p>
+<p>Permiten guardar los valores de los elementos HTML. Dicha persistencia se realiza utlizando como repositorio [GitHub Gist](https://gist.github.com/) .</p>
 
 #### data-gx-gist
 Atributo necesario para persistir los datos del form en [GitHub Gist](https://gist.github.com/) (Ver detalle: [Persistencia - GitHub Gist](#GitHub Gist). Representa el nombre del gist. Se debe referenciar dentro del HTML tag form.

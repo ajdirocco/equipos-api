@@ -168,7 +168,7 @@ Se persiste en [GitHub Gist](https://gist.github.com/) el valor de los HTML inpu
 ```
 <p>En el ejemplo anterior se puede ver que se duplica solo el segundo fieldset y se persisten ambos, cada fieldset en un file específico.</p>
 
-<p>En el siguiente ejemplo se puede ver como insertar una nueva fila en un table y se persiste todo el contenido en un gist</p>
+<p>En el siguiente ejemplo se puede ver como insertar una nueva fila en un table y se persiste todo el contenido en un gist:</p>
 
 ```
 <form data-gx-gist="GIST-NAME">
@@ -190,7 +190,7 @@ Se persiste en [GitHub Gist](https://gist.github.com/) el valor de los HTML inpu
 </form>
 ```
 
-<p><b>Nota:</b> recuerde que si no se especifica ningún gist la persistencia por defecto es local en el dispositivo.</p>
+<p><b>Nota:</b> recuerde que si no se especifica ningún gist la persistencia por defecto es local (en el localstorge del dispositivo).</p>
 
 <p><b>Un gist y dos files</b></p>
 <p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form en GitHub Gist. Lo persiste todo en un solo gist pero un file por cada grupo de inputs marcados.</p>

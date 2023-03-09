@@ -172,6 +172,8 @@ Se persiste en [GitHub Gist](https://gist.github.com/) el valor de los HTML inpu
 
 <p>En el siguiente ejemplo se puede ver como insertar una nueva fila en un table y se persiste todo el contenido en un gist:</p>
 
+<p>s.form + s.table.h + gxTrigger + data-gx-type + data-gx-target + data-gx-gist</p>
+
 ```
 <form data-gx-gist="GIST-NAME">
 <table>

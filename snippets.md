@@ -144,7 +144,7 @@ Se persiste en [GitHub Gist](https://gist.github.com/) el valor de los HTML inpu
 
 <p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form en GitHub Gist. Lo persiste todo en un solo gist file por defecto. Combinando los siguientes snippets, class y attribute se obtiene un form que junto a sus datos se periste en Gist:</p>
 
-<p>s.form + s.button + gxTrigger + data-gx-type + data-gx-target + data-gx-form-gist</p>
+<p>s.form + s.button + gxTrigger + data-gx-type + data-gx-target + data-gx-gist</p>
 
 ```
 <center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
@@ -157,16 +157,18 @@ Se persiste en [GitHub Gist](https://gist.github.com/) el valor de los HTML inpu
 
 <p>En el caso anterior el data-gx-gist esta a nivel del tag form y persisitirá cada input en el gist especificado, pero puede colocarlo donde desee. Por ejemplo podría tener dos divs o fieldsets y solo marcar uno solo, de esta manera solo se persistirá el grupo marcado. Vea el siguiente ejemplo:</p>
 
+<p>s.form + s.button + gxTrigger + data-gx-type + data-gx-target + data-gx-gist + data-gx-file</p>
+
 ```
 <center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
 <form data-gx-gist="GIST-NAME">
-<fieldset data-gx-gist-file="GIST-FILE-NAME-1"><label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;</fieldset>
-<fieldset id="fieldset" data-gx-gist-file="GIST-FILE-NAME-2">
+<fieldset><label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;</fieldset>
+<fieldset id="fieldset" data-gx-gist-file="GIST-FILE-NAME">
 <label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxTrigger" data-gx-type="remove" data-gx-target="fieldset" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
 <button class="gxTrigger" data-gx-type="clone-clean" data-gx-target="fieldset"  data-gx-insert="after" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar</button>
 </form>
 ```
-<p>En el ejemplo anterior se puede ver que se duplica solo el segundo fieldset y se persisten ambos, cada fieldset en un file específico.</p>
+<p>En el ejemplo anterior se puede ver que se duplica y persiste solo los datos del segundo fieldset.</p>
 
 <p>En el siguiente ejemplo se puede ver como insertar una nueva fila en un table y se persiste todo el contenido en un gist:</p>
 
@@ -200,12 +202,13 @@ Se persiste en [GitHub Gist](https://gist.github.com/) el valor de los HTML inpu
 ```
 <center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
 <form data-gx-gist="GIST-NAME">
-<fieldset id="fieldset">
-<div><label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;</div>
+<fieldset data-gx-gist-file="GIST-FILE-NAME-1"><label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;</fieldset>
+<fieldset id="fieldset" data-gx-gist-file="GIST-FILE-NAME-2">
 <label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxTrigger" data-gx-type="remove" data-gx-target="fieldset" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
 <button class="gxTrigger" data-gx-type="clone-clean" data-gx-target="fieldset"  data-gx-insert="after" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar</button>
 </form>
 ```
+<p>En el ejemplo anterior se puede ver que se duplica solo el segundo fieldset y se persisten ambos, cada fieldset en un file específico.</p>
 
 ## Librerias externas
 <p>generaForms y generaCRUD por defecto soportan Alpinejs y Tailwindcss.</p>

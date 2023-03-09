@@ -90,108 +90,118 @@ Ejemplos
 "s.color" genera un HTML color picker.
 <pre>s.color</pre>
 
-## Form - CRUD (DOM)
-<p>Combinando los snippets y los HML data-* attribute se puede realizar la manipulación del DOM para agregar o quitar elementos HTML. Vea los siguientes ejemplos:</p>
+## HTML data-* attribute y clases
+<p>Con los siguientes tags y class puede marcar el HTML y generar la funcionalidad de agregar o eliminar elementos y tambien puede persistir sus valores</p>
 
-#### CRUD de formulario
-s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index. El CRUD se ejecuta en el click de un elemento marcado con el class "gxButton".
+### Clases
+Con el class <b>gxTrigger</(b> puede marcar un elemento HTML para que ejecute el agregado o eliminación de un elemento referenciado con el atributo con data-gx-target.
+
+### Atributos de manipulación
+<p>Permiten clonar o eliminar elementos HTML directamente del DOM.</p>
+
+#### data-gx-target
+Indica el id del elemento al que se le aplicará el data-gx-type, pudiendo ser asi clonado o eliminado.
+
+#### data-gx-type
+Indica el tipo de manipulación sobre los elementos HML:
+ 1. clone
+    Duplica el elemento, junto con su valor (propiedad value), referenciado con data-gx-target.
+ 2. clone-clean  
+    La misma funcionalidad de clone pero limpia todos los imputs (deja vacia su propiedad value).
+ 3. remove  
+    Permite eliminar el elemento referenciado en data-gx-target.
+
+#### data-gx-insert
+Indica donde se quiere insertar un elemento clonado
+ 1. before
+    se inserta antes del elemento referenciado en data-gx-target.
+ 2. after
+    se inserta despues del elemento referenciado en data-gx-target.
+ 3. child
+    se inserta luego del último elemento hijo del elemento padre referenciado en data-gx-target. Es el valor por defecto si no se especifica el atributo data-gx-insert.
+
+### Atributos de persistencia
+<p>Permiten guardar los valores de los elementos HTML. Dicha persistencia se realiza utlizando como repositorio [GitHub Gist](https://gist.github.com/).</p>
+
+#### data-gx-gist
+Atributo necesario para persistir los datos del form en [GitHub Gist](https://gist.github.com/) (Ver detalle: [Persistencia - GitHub Gist](#GitHub Gist). Representa el nombre del gist. Se debe referenciar dentro del HTML tag form.
+
+#### data-gx-gist-file
+Atributo para persistir los datos del form en [GitHub Gist](https://gist.github.com/). Representa el nombre de un file dentro de un gist. Se debe referenciar dentro del HTML tag fieldset del form. Se puede especificar un file distinto para cada fieldset, si no se especifica ninguno se crea un file por defecto que contiene todos los campos del form exista o no un HTML tag fieldset.
+
+## Persistencia
+### Local
+<p>Por defecto se persiste todo el HTML y el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name en el localStorage de cada dispositivo.</p>
+
+### GitHub Gist
+Se persiste en [GitHub Gist](https://gist.github.com/) el valor de los HTML inputs que posean el atributo name y que se encuentren dentro de un elemento HTML marcado con el data attribute [data-gx-gist](#data-gx-gist). Los elementos hijos pueden o no estar agrupados (por ejemplo un div), pero si lo estan se puede utilizar el atributo [data-gx-form-gist-file](#data-gx-form-gist) para especificar, si se desea, un gist file por cada grupo, si no se especifica ninguno se grabaran todos los inputs en un solo file.
+
+<p><b>NOTA:</b> La persistencia se produce en el boton "Guardar" tanto de generaForm como de generaCRUD. se guarda tanto el valor de cada input como asi tambien todo el HTML generado.</p>
+
+#### Ejemplos de manipulación + persistencia en [GitHub Gist](https://gist.github.com/)
+
+<p><b>Un gist y dos files</b></p>
+
+<p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form en GitHub Gist. Lo persiste todo en un solo gist file por defecto. Combinando los siguientes snippets, class y attribute se obtiene un form que junto a sus datos se periste en Gist:</p>
+
+<p>s.form + s.button + gxTrigger + data-gx-type + data-gx-target + data-gx-form-gist</p>
+
 ```
 <center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
-<form>
-<fieldset id="fieldset0">
-<label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxButton" data-gx-crud-type="remove" data-gx-form-index="0" data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
-<button class="gxButton" data-gx-crud-type="clone-clean" data-gx-form-index="0"  data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar</button>
+<form data-gx-gist="GIST-NAME">
+<fieldset id="fieldset">
+<label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxTrigger" data-gx-type="remove" data-gx-target="fieldset" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
+<button class="gxTrigger" data-gx-type="clone-clean" data-gx-target="fieldset"  data-gx-insert="after" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar</button>
 </form>
 ```
 
-#### CRUD de table
-s.form + s.datatable + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index + data-gx-html-target
+<p>En el caso anterior el data-gx-gist esta a nivel del tag form y persisitirá cada input en el gist especificado, pero puede colocarlo donde desee. Por ejemplo podría tener dos divs o fieldsets y solo marcar uno solo, de esta manera solo se persistirá el grupo marcado. Vea el siguiente ejemplo:</p>
+
+```
+<center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
+<form data-gx-gist="GIST-NAME">
+<fieldset data-gx-gist-file="GIST-FILE-NAME-1"><label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;</fieldset>
+<fieldset id="fieldset" data-gx-gist-file="GIST-FILE-NAME-2">
+<label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxTrigger" data-gx-type="remove" data-gx-target="fieldset" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
+<button class="gxTrigger" data-gx-type="clone-clean" data-gx-target="fieldset"  data-gx-insert="after" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar</button>
+</form>
+```
+<p>En el ejemplo anterior se puede ver que se duplica solo el segundo fieldset y se persisten ambos, cada fieldset en un file específico.</p>
+
+<p>En el siguiente ejemplo se puede ver como insertar una nueva fila en un table. No es necesario ningún data attribute de persistencia porque no hay inputs y values solo html, lo cual se persiste por defecto cuando se guarda todo el documento (botón Guardar de generaForm o generaCrud)</p>
+
 ```
 <form>
 <table>
-<tbody id="target0">
+<tbody>
   <tr>
     <th>Columna 1</th>
     <th>Columna 2</th>
     <th>Columna 3</th>
   </tr>
-  <tr id="fieldset0">
+  <tr id="fieldset">
     <td>hola</td>
     <td>mundo</td>
     <td>como va</td>
   </tr>
 </tbody>
 </table>
-<button class="gxButton" data-gx-html-target="target0" data-gx-crud-type="clone-clean" data-gx-form-index="0" data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;">Agregar</button>
-</form>
-```
-
-## HTML data-* attribute
-<p>Con los siguientes tags puede marcar el HTML y generar la funcionalidad de agregar o eliminar elementos:</p>
-
-#### data-gx-form-index
-Indica el index del form al que quiere hacer referencia.
-
-#### data-gx-html-target
-Indica el id del del elemento al que quiere hacer referencia. Se suele usar cuando se quiere hacer el insert o delete de elementos HTML que no estan agrupados en un fielset o el fieldset se encuentra anidado o dentro de un elemento que no puede cortarse con fieldset, por ejemplo un table.
-
-#### data-gx-crud-type
-Indica el tipo de manipulación sobre los elementos HML:
- 1. clone  
-    Duplica los elementos HTML agrupados por otro elemento marcado con el atributo id="fieldsetN" (n = número de índice único).
- 2. clone-clean  
-    La misma funcionalidad de clone pero limpia todos los imputs.
- 4. remove  
-    Permite eliminar un grupo de elementos HTML.
-
-#### data-gx-fieldset-index
-Indica el index del fielset al que quiere hacer referencia. Recuede que para manipular un grupo de elementos a la vez debe encerrar dichos elementos por otro (div, fieldset, row, etc) y agregarle el atributo id con el siguiente formato:  
- id="fieldsetN" (n = número de índice único).
- 
-#### data-gx-form-gist
-Atributo necesario para persistir los datos del form en [GitHub Gist](https://gist.github.com/) (Ver detalle: [Persistencia - GitHub Gist](#GitHub Gist). Representa el nombre del gist. Se debe referenciar dentro del HTML tag form.
-
-#### data-gx-form-gist-file
-Atributo para persistir los datos del form en [GitHub Gist](https://gist.github.com/). Representa el nombre de un file dentro de un gist. Se debe referenciar dentro del HTML tag fieldset del form. Se puede especificar un file distinto para cada fieldset, si no se especifica ninguno se crea un file por defecto que contiene todos los campos del form exista o no un HTML tag fieldset.
-
-## Persistencia
-### Local
-<p>Por defecto se persiste el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name en el localStorage de cada dispositivo.</p>
-
-### GitHub Gist
-Se persiste en [GitHub Gist](https://gist.github.com/) el valor de los HTML inputs que posean el atributo name y que se encuentren dentro de un HTML form. Dicho form debe tener el atributo [data-gx-form-gist](#data-gx-form-gist) que representa un gist especifico y puede o no tener HTML tags fieldset para agrupar los datos, si los posee se puede utilizar el atributo [data-gx-form-gist-file](#data-gx-form-gist) para especificar, si se desea, un gist file por cada fieldset, si no se especifica ninguno se grabaran todos los inputs en un solo file.
-
-<p>La persistencia se produce en el boton "Guardar" tanto de generaForm como de generaCRUD. se guarda tanto el valor de cada input como asi tambien todo el HTML generado.</p>
-
-#### Ejemplos de CRUD de formulario + persistencia en [GitHub Gist](https://gist.github.com/)
-<p><b>Un gist y un solo file</b></p>
-<p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form en GitHub Gist. Lo persiste todo en un solo gist file por defecto.</p>
-
-<p>s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index + data-gx-form-gist</p>
-
-```
-<center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
-<form data-gx-form-gist="GIST-NAME">
-<fieldset id="fieldset0">
-<label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxButton" data-gx-crud-type="remove" data-gx-form-index="0" data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
-<button class="gxButton" data-gx-crud-type="clone-clean" data-gx-form-index="0"  data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar</button>
+<button class="gxTrigger" data-gx-target="fieldset" data-gx-type="clone-clean" data-gx-insert="after" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;">Agregar</button>
 </form>
 ```
 
 <p><b>Un gist y dos files</b></p>
-<p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form en GitHub Gist. Lo persiste todo en un solo gist file por defecto.</p>
+<p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form en GitHub Gist. Lo persiste todo en un solo gist pero un file por cada grupo de inputs marcados.</p>
 
-<p>s.form + s.button + data-gx-crud-type + data-gx-fieldset-index + data-gx-form-index + data-gx-form-gist</p>
- 
+<p>s.form + s.button + gxTrigger + data-gx-type + data-gx-target + data-gx-gist + data-gx-file</p>
+
 ```
 <center><h1 style="margin-top:10px;margin-bottom:20px;">Form CRUD</h1></center>  
-<form data-gx-form-gist="GIST-NAME">
-<fieldset id="fieldset0" data-gx-form-gist-file="FILE-NAME-0">
-<label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxButton" data-gx-crud-type="remove" data-gx-form-index="0" data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
-<button class="gxButton" data-gx-crud-type="clone-clean" data-gx-form-index="0"  data-gx-fieldset-index="0" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar Grupo 1</button>
-<fieldset id="fieldset1" data-gx-form-gist-file="FILE-NAME-1">
-<label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox1" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxButton" data-gx-crud-type="remove" data-gx-form-index="0" data-gx-fieldset-index="1" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
-<button class="gxButton" data-gx-crud-type="clone-clean" data-gx-form-index="1"  data-gx-fieldset-index="1" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar Grupo 2</button>
+<form data-gx-gist="GIST-NAME">
+<fieldset id="fieldset">
+<div><label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;</div>
+<label for="inputbox">Hola:&nbsp;</label><input type="text" id="inputbox" name="inputbox" placeholder=" mundo..." style="border-radius:0.25rem;border-width:1px;border-color:black;margin-bottom:10px;width: 62%;">&nbsp;<button class="gxTrigger" data-gx-type="remove" data-gx-target="fieldset" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;" >Quitar</button><br></fieldset>
+<button class="gxTrigger" data-gx-type="clone-clean" data-gx-target="fieldset"  data-gx-insert="after" type="button" style="border-radius:0.25rem;border-width:1px;border-color:black;padding-left:5px;padding-right:5px;float: right;" >Agregar</button>
 </form>
 ```
 

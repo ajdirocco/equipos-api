@@ -134,7 +134,7 @@ Atributo para persistir los datos del form en [GitHub Gist](https://gist.github.
 <p>Por defecto se persiste todo el HTML y el valor de los HTML inputs que se encuentren dentro de un HTML form y que posean el atributo name en el localStorage de cada dispositivo.</p>
 
 ### GitHub Gist
-Se persiste en [GitHub Gist](https://gist.github.com/) el valor de los HTML inputs que posean el atributo name y que se encuentren dentro de un elemento HTML marcado con el data attribute [data-gx-gist](#data-gx-gist). Los elementos hijos pueden o no estar agrupados (por ejemplo un div), pero si lo estan se puede utilizar el atributo [data-gx-form-gist-file](#data-gx-form-gist) para especificar, si se desea, un gist file por cada grupo, si no se especifica ninguno se grabaran todos los inputs en un solo file.
+Se persiste en [GitHub Gist](https://gist.github.com/) el valor de los HTML inputs que posean el atributo name y que se encuentren dentro de un elemento HTML marcado con el data attribute [data-gx-gist](#data-gx-gist). Los elementos hijos pueden o no estar agrupados (por ejemplo un div), pero si lo estan se puede utilizar el atributo [data-gx-gist-file](#data-gx-gist-file) para especificar, si se desea, un gist file por cada grupo, si no se especifica ninguno se grabaran todos los inputs en un solo file.
 
 <p><b>NOTA:</b> La persistencia se produce en el boton "Guardar" tanto de generaForm como de generaCRUD. se guarda tanto el valor de cada input como asi tambien todo el HTML generado.</p>
 

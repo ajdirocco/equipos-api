@@ -140,7 +140,7 @@ Se persiste en [GitHub Gist](https://gist.github.com/) el valor de los HTML inpu
 
 #### Ejemplos de manipulación + persistencia en [GitHub Gist](https://gist.github.com/)
 
-<p><b>Un gist y dos files</b></p>
+<p><b>Un gist y un file</b></p>
 
 <p>El siguiente es un ejemplo de persistencia de los valores de los inputs de un form en GitHub Gist. Lo persiste todo en un solo gist file por defecto. Combinando los siguientes snippets, class y attribute se obtiene un form que junto a sus datos se periste en Gist:</p>
 
